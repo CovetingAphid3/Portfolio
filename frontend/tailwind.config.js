@@ -1,32 +1,30 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-        "./src/**/*.{js,jsx,ts,tsx}",
-    ],
-theme: {
-    colors: {
-      'blue': '#1fb6ff',
-      'purple': '#7e5bef',
-      'pink': '#ff49db',
-      'orange': '#ff7849',
-      'green': '#13ce66',
-      'yellow': '#ffc82c',
-      'gray-dark': '#273444',
-      'gray': '#8492a6',
-      'gray-light': '#d3dce6',
-    },
-    fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
+module.exports = {
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  mode: "jit",
+  theme: {
     extend: {
-      spacing: {
-        '8xl': '96rem',
-        '9xl': '128rem',
+      colors: {
+        primary: "#0e1111",
+        secondary: "#00f6ff",
+        dimWhite: "rgba(255, 255, 255, 0.7)",
+        dimBlue: "rgba(9, 151, 124, 0.1)",
+        blue: "#0A2342",
+        crimson: "#A30014"
       },
-      borderRadius: {
-        '4xl': '2rem',
-      }
-    }
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        roboto: ["Roboto","sans-serif"]
+      },
+    },
+    screens: {
+      xs: "480px",
+      ss: "620px",
+      sm: "768px",
+      md: "1060px",
+      lg: "1200px",
+      xl: "1700px",
+    },
   },
-}
+  plugins: [],
+};
