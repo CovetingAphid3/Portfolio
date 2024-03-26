@@ -2,6 +2,10 @@ import styles from './style'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
+import Portfolio from './components/Portfolio'
+import Timeline from './components/Timeline'
+import Contact from './components/Contact'
+
 function App() {
 
     return (
@@ -18,6 +22,9 @@ function App() {
             </div>
             <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
                 <div className={`${styles.boxWidth}`}>
+                    <Portfolio/>
+                    <Timeline/>
+                    <Contact/>
                     <Footer />
                 </div>
             </div>

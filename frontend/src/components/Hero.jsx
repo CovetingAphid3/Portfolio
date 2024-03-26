@@ -27,7 +27,7 @@ const Hero = () => {
                 </div>
 
                 <h1 className="font-roboto font-semibold ss:text-[30px] text-[36px] text-white ss:leading-[100.8px] leading-[75px] w-full">
-                    Seamless Integration of <span className="text-crimson">Frontend</span> and <span className="text-crimson">Backend</span> Technologies{" "}
+                    Seamless Integration of <span className="text-crimson">Frontend</span> and <span className="text-crimson">Backend</span> {" "}
                 </h1>
                 <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
                     Elevate your projects with my expertise in seamlessly blending frontend and backend technologies.
