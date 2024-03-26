@@ -22,7 +22,7 @@ const Hero = () => {
                     <h1 className="flex-1 font-roboto font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
                         <span className="text-crimson">Full Stack</span>
                         <br className="sm:block hidden" />{" "}
-                        Web{" "} <span className="text-crimson">Developer</span>
+                        Web Developer
                     </h1>
                 </div>
 
