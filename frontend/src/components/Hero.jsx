@@ -14,7 +14,7 @@ const Hero = () => {
                 <div className="flex flex-row items-center py-[6px] px-4  mb-4">
                     <p className={`${styles.paragraph} `}>
                         Hello, my name is: {" "}
-                        <span className="text-white font-bold font-roboto"> Tadiwa Chawanda</span>{" "}
+                        <span className="text-white font-bold font-roboto"> T.Chawanda</span>{" "}
                     </p>
                 </div>
 
@@ -30,8 +30,8 @@ const Hero = () => {
                     Seamless Integration of <span className="text-crimson">Frontend</span> and <span className="text-crimson">Backend</span> {" "}
                 </h1>
                 <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-                    Elevate your projects with my expertise in seamlessly blending frontend and backend technologies.
-                    From crafting captivating user interfaces to managing databases with finesse, I've got you covered every step of the way."
+                    I bring a unique fusion of creativity and technical prowess to every project.
+                    With a passion for both frontend finesse and backend wizardry, I craft seamless user interfaces while ensuring robust database management
                 </p>
             </div>
 
@@ -39,10 +39,10 @@ const Hero = () => {
                 className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative flex-col`}
             >
                 <div
-                    
+
                     className="bottom-10 w-[70%] h-[70%] relative z-[5] rounded-full cursor-pointer transition-all duration-300 ease-in-out"
                 >
-                    <img src={bitcoin} alt="billing" className=" rounded-xl hover:scale-110 transition-all duration-300 ease-in-out"/>
+                    <img src={bitcoin} alt="billing" className=" rounded-xl hover:scale-110 transition-all duration-300 ease-in-out" />
                 </div>
             </div>
         </section>

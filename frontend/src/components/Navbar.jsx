@@ -16,7 +16,8 @@ const Navbar = () => {
             className={`font-roboto 
             font-normal 
             cursor-pointer
-            hover:text-secondary
+            text-secondary
+            hover:text-crimson
              text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} text-white mr-10`}
           >
             <a href={`#${nav.id}`}>{nav.title}</a>
