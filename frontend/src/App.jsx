@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Portfolio from './components/Portfolio'
 import Timeline from './components/Timeline'
 import Contact from './components/Contact'
+import About from './components/About'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             </div>
             <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
                 <div className={`${styles.boxWidth}`}>
+                    <About/>
                     <Portfolio/>
                     <Timeline/>
                     <Contact/>
