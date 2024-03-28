@@ -1,5 +1,6 @@
 import styles from "../style";
 import { bitcoin } from "../assets";
+import {logo} from "../assets";
 
 const Hero = () => {
     return (
@@ -42,7 +43,7 @@ const Hero = () => {
 
                     className="bottom-10 w-[70%] h-[70%] relative z-[5] rounded-full cursor-pointer transition-all duration-300 ease-in-out"
                 >
-                    <img src={bitcoin} alt="billing" className=" rounded-xl hover:scale-110 transition-all duration-300 ease-in-out" />
+                    <img src={logo} alt="billing" className=" rounded-xl hover:scale-110 transition-all duration-300 ease-in-out" />
                 </div>
             </div>
         </section>
