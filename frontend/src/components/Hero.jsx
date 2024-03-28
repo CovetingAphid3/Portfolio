@@ -20,7 +20,7 @@ const Hero = () => {
                 </div>
 
                 <div className="flex flex-row justify-between items-center w-full">
-                    <h1 className="flex-1 font-roboto font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
+                    <h1 className=" flex-1 font-roboto font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
                         <span className="text-crimson">Full Stack</span>
                         <br className="sm:block hidden" />{" "}
                         Web Developer
@@ -28,7 +28,7 @@ const Hero = () => {
                 </div>
 
                 <h1 className="font-roboto font-semibold ss:text-[30px] text-[36px] text-white ss:leading-[100.8px] leading-[75px] w-full">
-                    Seamless Integration of <span className="text-crimson">Frontend</span> and <span className="text-crimson">Backend</span> {" "}
+                    Seamles Integration of <span className="styled text-crimson">Frontend</span> and <span className="styled text-crimson">Backend</span> {" "}
                 </h1>
                 <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
                     I bring a unique fusion of creativity and technical prowess to every project.

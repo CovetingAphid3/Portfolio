@@ -3,6 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.styled{
+  text-transform: uppercase;
+    -webkit-background-clip: text;
+  background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+    background-image: url("assets/road.jpg");
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
