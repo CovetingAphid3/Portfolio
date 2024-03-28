@@ -21,14 +21,14 @@ const Hero = () => {
 
                 <div className="flex flex-row justify-between items-center w-full">
                     <h1 className=" flex-1 font-roboto font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
-                        <span className="text-crimson">Full Stack</span>
+                        <span className="styled text-crimson">Full Stack</span>
                         <br className="sm:block hidden" />{" "}
                         Web Developer
                     </h1>
                 </div>
 
                 <h1 className="font-roboto font-semibold ss:text-[30px] text-[36px] text-white ss:leading-[100.8px] leading-[75px] w-full">
-                    Seamles Integration of <span className="styled text-crimson">Frontend</span> and <span className="styled text-crimson">Backend</span> {" "}
+                    Seamles Integration of <span className="styled text-crimson">Front</span> and <span className="styled text-crimson">Backend</span> {" "}
                 </h1>
                 <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
                     I bring a unique fusion of creativity and technical prowess to every project.
