@@ -14,7 +14,7 @@ const Hero = () => {
                 <div className="flex flex-row items-center py-[6px] px-4  mb-4">
                     <p className={`${styles.paragraph} `}>
                         Hello, my name is: {" "}
-                        <span className="text-white font-bold font-roboto"> T.Chawanda</span>{" "}
+                        <span className="text-crimson font-bold font-roboto"> T.Chawanda</span>{" "}
                     </p>
                 </div>
 
