@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
 import Portfolio from './components/Portfolio'
-import Timeline from './components/Timeline'
+//import Timeline from './components/Timeline'
 import Contact from './components/Contact'
 import About from './components/About'
 
@@ -25,7 +25,6 @@ function App() {
                 <div className={`${styles.boxWidth}`}>
                     <About/>
                     <Portfolio/>
-                    <Timeline/>
                     <Contact/>
                     <Footer />
                 </div>
