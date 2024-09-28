@@ -13,6 +13,6 @@ This portfolio showcases my projects, skills, and experiences in [your field, e.
 
 ## Contact
 
-[email@example.com](mailto:email@example.com) 
+[tadiwachawanda@gmail.com](mailto:tadiwachawanda@gmail.com) 
 
 
