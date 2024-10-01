@@ -1,50 +1,59 @@
-import styles from "../style";
-import { bitcoin } from "../assets";
-import {logo} from "../assets";
+import React from 'react';
+import { motion } from 'framer-motion';
+import styles from "../styles/Hero.module.css";
+import { logo2 } from "../assets";
 
 const Hero = () => {
     return (
-        <section
-            id="home"
-            className={`flex md:flex-row flex-col ${styles.paddingY}`}
-        >
-            <div
-                className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
-            >
-
-                <div className="flex flex-row items-center py-[6px] px-4  mb-4">
-                    <p className={`${styles.paragraph} `}>
-                        Hello, my name is: {" "}
-                        <span className="text-crimson font-bold font-roboto"> T.Chawanda</span>{" "}
-                    </p>
-                </div>
-
-                <div className="flex flex-row justify-between items-center w-full">
-                    <h1 className=" flex-1 font-roboto font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
-                        <span className="styled text-crimson">Full Stack</span>
-                        <br className="sm:block hidden" />{" "}
-                        Web Developer
-                    </h1>
-                </div>
-
-                <h1 className="font-roboto font-semibold ss:text-[30px] text-[36px] text-white ss:leading-[100.8px] leading-[75px] w-full">
-                    Seamles Integration of <span className="styled text-crimson">Front</span> and <span className="styled text-crimson">Backend</span> {" "}
-                </h1>
-                <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-                    I bring a unique fusion of creativity and technical prowess to every project.
-                    With a passion for both frontend finesse and backend wizardry, I craft seamless user interfaces while ensuring robust database management
-                </p>
-            </div>
-
-            <div
-                className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative flex-col`}
-            >
-                <div
-
-                    className="bottom-10 w-[70%] h-[70%] relative z-[5] rounded-full cursor-pointer transition-all duration-300 ease-in-out"
+        <section id="home" className={` ${styles.heroSection} ${styles.paddingY}`}>
+            <div className={`${styles.heroContent} ${styles.flexStart}`}>
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className={styles.introduction}
                 >
-                    <img src={logo} alt="billing" className=" rounded-xl hover:scale-110 transition-all duration-300 ease-in-out" />
-                </div>
+                    <p className={styles.greeting}>
+                        Hello, I'm <span className={styles.name}>T. Chawanda</span>
+                    </p>
+                </motion.div>
+                <motion.h1 
+                    className={styles.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                    <span className={styles.highlight}>Full Stack</span>
+                    <br className={styles.breakpoint} />
+                    Developer
+                </motion.h1>
+                <motion.h2 
+                    className={styles.subtitle}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                    Seamless Integration of <span className={styles.highlight}>Front</span> and <span className={styles.highlight}>Backend</span>
+                </motion.h2>
+                <motion.p 
+                    className={styles.description}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                    I combine creativity with technical expertise to deliver exceptional digital solutions.
+                    With a focus on both frontend elegance and backend functionality, I create intuitive user interfaces while ensuring robust data management.
+                </motion.p>
+            </div>
+            <div className={styles.imageContainer}>
+                <motion.div 
+                    className={styles.imageWrapper}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.8 }}
+                >
+                    <img src={logo2} alt="T. Chawanda" className={styles.profileImage} />
+                </motion.div>
             </div>
         </section>
     );

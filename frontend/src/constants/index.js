@@ -1,6 +1,5 @@
 import {
   nft,
-  bit,
   people01,
   people02,
   people03,
@@ -8,7 +7,6 @@ import {
   instagram,
   linkedin,
   twitter,
-  airbnb,
   binance,
   coinbase,
   dropbox,
@@ -158,7 +156,7 @@ export const socialMedia = [
 export const clients = [
   {
     id: "client-1",
-    logo: bit,
+    logo: "",
   },
   {
     id: "client-2",

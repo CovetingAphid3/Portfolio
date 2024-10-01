@@ -1,64 +1,64 @@
-import styles from "../style";
+import React from 'react';
 import { logo } from "../assets";
 import { footerLinks, socialMedia } from "../constants";
 
 const Footer = () => (
-    <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
-        <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
-            <div className="flex-[1] flex flex-col justify-start mr-10">
-                <img
-                    src={logo}
-                    alt="hoobank"
-                    className="w-[266px] h-[72.14px] object-contain"
-                />
-                <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
-                    Feel free to reach out to me if you have any questions or just want to say hi.
-                </p>
-            </div>
-
-            <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
-                {footerLinks.map((footerlink) => (
-                    <div key={footerlink.title} className={`flex flex-col ss:my-0 my-4 min-w-[150px]`}>
-                        <h4 className="font-roboto font-medium text-[18px] leading-[27px] text-white">
-                            {footerlink.title}
-                        </h4>
-                        <ul className="list-none mt-4">
-                            {footerlink.links.map((link, index) => (
-                                <li
-                                    key={link.name}
-                                    className={
-                                        `font-roboto font-normal text-[16px] leading-[24px] text-dimWhite
-                                         hover:text-secondary cursor-pointer ${index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
-                                        }`}
-                                >
-                                    {link.name}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
-        </div>
-
-        <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
-            <p className="font-roboto font-normal text-center text-[18px] leading-[27px] text-white">
-                Copyright Ⓒ 2024 T.Chawanda All Rights Reserved.
-            </p>
-
-            <div className="flex flex-row md:mt-0 mt-6">
-                {socialMedia.map((social, index) => (
+    <footer className="bg-gray-900 text-white py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row justify-between items-start mb-12">
+                <div className="mb-8 md:mb-0 md:w-1/3">
                     <img
-                        key={social.id}
-                        src={social.icon}
-                        alt={social.id}
-                        className={`w-[21px] h-[21px] object-contain cursor-pointer ${index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
-                            }`}
-                        onClick={() => window.open(social.link)}
+                        src={logo}
+                        alt="T.Chawanda"
+                        className="w-48 h-auto object-contain mb-4"
                     />
-                ))}
+                    <p className="text-gray-400 max-w-xs">
+                        Feel free to reach out to me if you have any questions or just want to say hi.
+                    </p>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:w-2/3">
+                    {footerLinks.map((footerlink) => (
+                        <div key={footerlink.title}>
+                            <h4 className="font-semibold text-lg mb-4">
+                                {footerlink.title}
+                            </h4>
+                            <ul className="space-y-2">
+                                {footerlink.links.map((link) => (
+                                    <li key={link.name}>
+                                        <a href={link.link} className="text-gray-400 hover:text-white transition-colors">
+                                            {link.name}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p className="text-gray-400 text-sm mb-4 md:mb-0">
+                    Copyright © {new Date().getFullYear()} T.Chawanda. All Rights Reserved.
+                </p>
+                <div className="flex space-x-4">
+                    {socialMedia.map((social) => (
+                        <a
+                            key={social.id}
+                            href={social.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-white transition-colors"
+                        >
+                            <img
+                                src={social.icon}
+                                alt={social.id}
+                                className="w-6 h-6 object-contain"
+                            />
+                        </a>
+                    ))}
+                </div>
             </div>
         </div>
-    </section>
+    </footer>
 );
 
 export default Footer;

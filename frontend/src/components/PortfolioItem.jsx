@@ -1,29 +1,53 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const icons = {
+    REACT: { icon: 'devicon-react-original colored', label: 'React' },
+    NODE: { icon: 'devicon-nodejs-plain colored', label: 'Node.js' },
+    MONGO: { icon: 'devicon-mongodb-plain colored', label: 'MongoDB' },
+    NEXT: { icon: 'devicon-nextjs-original colored', label: 'Next.js' },
+    TAILWIND: { icon: 'devicon-tailwindcss-plain colored', label: 'Tailwind CSS' },
+    GO: { icon: 'devicon-go-original-wordmark colored', label: 'Go' },
+    SOCKET: { icon: 'devicon-socketio-original', label: 'Socket.io' },
+    TS: { icon: 'devicon-typescript-plain colored', label: 'TypeScript' },
+    FRAMER: { icon: 'devicon-framermotion-original', label: 'Framer Motion' },
+    REDUX: { icon: 'devicon-redux-original colored', label: 'Redux' },
+    // Add more tech stacks if needed
+};
 
 const PortfolioItem = ({ title, imgUrl, stack, link }) => {
     return (
-        <div className='text-white border border-white-200 rounded-lg overflow-hidden'>
-            <img src={imgUrl} alt="portfolio"
-                className="w-full h-36 md:h-48 object-cover cursor-pointer rounded-lg shadow-sm"
-            />
-            <div className='w-full p-4'>
-                <h3 className="text-lg md:text-xl mb-2 md:mb-3 font-semibold">{title}</h3>
-                <p className='flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm'>
-                    {stack.map(item => (
-                        <span className='inline-block 
-                                px-2 py-1 font-semibold border 
-                                border-solid border-white-200 
-                                rounded-md'>
-                            {item}
-                        </span>
-                    ))}
-                </p>
-            </div>
+        <motion.div 
+            className='bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:scale-105'
+            whileHover={{ y: -5 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
+            <a href={link} target="_blank" rel="noopener noreferrer" className="block">
+                <img 
+                    src={imgUrl} 
+                    alt={title}
+                    className="w-full h-48 object-cover transition duration-300 hover:opacity-80"
+                />
+                <div className='p-4'>
+                    <h3 className="text-xl font-bold mb-3">{title}</h3>
+                    <div className='flex flex-wrap gap-2'>
+                        {stack.map(item => (
+                            <motion.span 
+                                key={item} 
+                                className='inline-flex items-center px-2 py-1 bg-gray-700 rounded-full text-sm'
+                                whileHover={{ scale: 1.05 }}
+                            >
+                                <i className={`${icons[item]?.icon} mr-1`}></i>
+                                {icons[item]?.label || item}
+                            </motion.span>
+                        ))}
+                    </div>
+                </div>
+            </a>
+        </motion.div>
+    );
+};
 
-        </div>
-
-    )
-}
-
-
-export default PortfolioItem
+export default PortfolioItem;

@@ -1,18 +1,15 @@
 import programmer from "./programmer.svg";
 import nft from "./nft-6825637.svg";
-import bit from "./bitcoin-225080.svg";
 import bank from "./bank.png";
 import paypal from "./paypal.svg";
-import bitcoin from "./bitcoin.svg";
-import airbnb from "./airbnb.png";
 import bill from "./bill.png";
 import binance from "./binance.png";
 import card from "./card.png";
 import coinbase from "./coinbase.png";
 import dropbox from "./dropbox.png";
 import logo from "./logo.svg";
+import logo2 from "./logo2.jpg"
 import quotes from "./quotes.svg";
-import robot from "./robot.png";
 import send from "./Send.svg";
 import shield from "./Shield.svg";
 import star from "./Star.svg";
@@ -33,19 +30,16 @@ import people03 from "./people03.png";
 export {
     programmer,
     nft,
-    bit,
     bank,
     paypal,
-    bitcoin,
-    airbnb,
     bill,
     binance,
     card,
     coinbase,
     dropbox,
     logo,
+    logo2,
     quotes,
-    robot,
     send,
     shield,
     star,

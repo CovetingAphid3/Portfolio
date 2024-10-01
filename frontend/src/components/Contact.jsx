@@ -1,57 +1,65 @@
 import React from 'react';
-import Title from './Title';
 
 function Contact() {
     return (
-        <div id="contact" className="text-white flex flex-col mb-10 mx-auto">
-            <div className="flex flex-col justify-center items-center">
-                <p className="text-3xl md:text-5xl font-bold">
-                    <span className="text-crimson">Get</span> in touch
-                </p>
-                <p className='text-lg md:text-xl my-4 md:my-6 font-medium'>
-                    Feel free to contact me via email at <a href="mailto:@tadiwachawanda@gmail.com" className="text-secondary underline">tadiwachawanda@gmail</a> or with the form below
-                </p>
+        <section id="contact" className="bg-gray-900 text-white py-16">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                        <span className="text-crimson">Get</span> in touch
+                    </h2>
+                    <p className="text-lg md:text-xl text-gray-300">
+                        Feel free to contact me via email at{' '}
+                        <a href="mailto:tadiwachawanda@gmail.com" className="text-crimson underline hover:text-white transition-colors">
+                            tadiwachawanda@gmail.com
+                        </a>
+                        {' '}or with the form below
+                    </p>
+                </div>
                 <form
                     action="https://getform.io/f/paoxlqjb"
                     method="POST"
-                    className="flex flex-col w-full md:w-7/12"
+                    className="max-w-2xl mx-auto"
                 >
-                    <Title>Contact</Title>
-                    <input
-                        required
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        className="p-2 bg-transparent border-2 rounded-md focus:outline-none"
-                    />
-                    <input
-                        required
-                        type="text"
-                        name="email"
-                        placeholder="Email"
-                        className="my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none"
-                    />
-                    <textarea
-                        required
-                        name="message"
-                        placeholder="Message"
-                        rows="10"
-                        className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none"
-                    />
-                    <button
-                        type="submit"
-                        className="
-                        bg-white text-primary
-                        flex items-center justify-center text-[36px]
-                        text-center px-8 py-3 w-max text-base font-medium rounded-md   
-                        from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white hover:bg-blue hover:text-white"
-                    >
-                        Submit
-                    </button>
+                    <div className="mb-6">
+                        <input
+                            required
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            className="w-full p-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-crimson transition-colors"
+                        />
+                    </div>
+                    <div className="mb-6">
+                        <input
+                            required
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            className="w-full p-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-crimson transition-colors"
+                        />
+                    </div>
+                    <div className="mb-6">
+                        <textarea
+                            required
+                            name="message"
+                            placeholder="Message"
+                            rows="6"
+                            className="w-full p-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-crimson transition-colors"
+                        />
+                    </div>
+                    <div className="text-center">
+                        <button
+                            type="submit"
+                            className="bg-crimson text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-red-700 transition-colors"
+                        >
+                            Submit
+                        </button>
+                    </div>
                 </form>
             </div>
-        </div>
-    )
+        </section>
+    );
 }
 
 export default Contact;
