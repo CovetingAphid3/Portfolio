@@ -1,35 +1,32 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import About from './components/About';
-
+import styles from './style'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Footer from './components/Footer'
+import Portfolio from './components/Portfolio'
+import Contact from './components/Contact'
+import About from './components/About'
 function App() {
     return (
-        <div className="bg-gray-900 text-white min-h-screen">
-            <div className="sticky top-0 z-10 bg-gray-900 shadow-md">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className='bg-gray-900'>
+            <div className={`${styles.paddingX} ${styles.flexCenter} sticky top-0 z-10`}>
+                <div className={`${styles.boxWidth}`}>
                     <Navbar />
                 </div>
             </div>
-            
-            <main>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className={ `${styles.flexStart}`}>
+                <div className={`${styles.boxWidth}`}>
                     <Hero />
                 </div>
-                
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
-                    <About />
-                    <Portfolio />
-                    <Contact />
+            </div>
+            <div className={`${styles.paddingX} ${styles.flexStart}`}>
+                <div className={`${styles.boxWidth}`}>
+                    <About/>
+                    <Portfolio/>
+                    <Contact/>
+                    <Footer />
                 </div>
-            </main>
-
-            <Footer />
+            </div>
         </div>
-    );
+    )
 }
-
-export default App;
+export default App
