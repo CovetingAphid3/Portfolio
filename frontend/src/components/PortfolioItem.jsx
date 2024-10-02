@@ -13,6 +13,9 @@ const icons = {
     FRAMER: { icon: 'devicon-framermotion-original', label: 'Framer Motion' },
     REDUX: { icon: 'devicon-redux-original colored', label: 'Redux' },
     JS: { icon: 'devicon-javascript-plain colored', label: 'Javascript' },
+    PG: { icon: 'devicon-postgresql-plain colored', label: 'Postgress' },
+    PY: { icon: 'devicon-python-plain colored', label: 'Python' },
+    CS: { icon: 'devicon-csharp-plain colored', label: 'C#' },
 };
 
 const PortfolioItem = ({ title, imgUrl, stack, link }) => {
