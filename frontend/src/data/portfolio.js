@@ -14,7 +14,7 @@ export default [
    {
       title: 'Chat Application',
       imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
-      stack: ['REACT', 'GO', 'SOCKET'],
+      stack: ['GO', 'SOCKET', 'JS'],
       link: 'https://youtu.be/A8eegxL82PI',
    },
    {

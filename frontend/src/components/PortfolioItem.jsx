@@ -12,7 +12,7 @@ const icons = {
     TS: { icon: 'devicon-typescript-plain colored', label: 'TypeScript' },
     FRAMER: { icon: 'devicon-framermotion-original', label: 'Framer Motion' },
     REDUX: { icon: 'devicon-redux-original colored', label: 'Redux' },
-    // Add more tech stacks if needed
+    JS: { icon: 'devicon-javascript-plain colored', label: 'Javascript' },
 };
 
 const PortfolioItem = ({ title, imgUrl, stack, link }) => {
