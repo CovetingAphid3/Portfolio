@@ -9,31 +9,31 @@ export default [
       title: 'Inventory Management System',
       imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
       stack: ['REACT', 'TS', 'MONGO'],
-      link: 'https://thehackershideout.com',
+      link: 'https://github.com/Covetingaphid3/Inventory-Management',
    },
    {
       title: 'Chat Application',
       imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
       stack: ['GO', 'SOCKET', 'JS'],
-      link: 'https://youtu.be/A8eegxL82PI',
+      link: 'https://github.com/Covetingaphid3/Chat-Application',
    },
    {
       title: 'Data Structure & Algorithms',
       imgUrl: 'https://cdn.pixabay.com/photo/2021/03/11/12/58/laptop-6087062_1280.png',
       stack: ['PY', 'TS', 'CS',"GO"],
-      link: 'https://youtu.be/A8eegxL82PI',
+      link: 'https://github.com/Covetingaphid3/dsa',
    },
    {
       title: 'Online Laundromat',
       imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
       stack: ['PY', 'FLASK', 'BS'],
-      link: 'https://github.com/yourusername/Online-Shop-Backend',
+      link: 'https://github.com/Covetingaphid3/laundromat',
    },
    {
       title: 'Ecommerce Shopping Cart',
       imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
       stack: ['TS', 'GO', 'TAILWIND'],
-      link: 'https://github.com/yourusername/ecommerce-shopping-cart',
+      link: 'https://github.com/CovetingAphid3/ecommerce-shopping-cart',
    },
 ];
 
