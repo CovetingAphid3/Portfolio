@@ -24,21 +24,15 @@ export default [
       link: 'https://youtu.be/A8eegxL82PI',
    },
    {
-      title: 'Virtual Travel Website',
+      title: 'Online Laundromat',
       imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
-      stack: ['NEXT', 'FRAMER','TS'],
-      link: 'https://github.com/yourusername/travel-discovery',
-   },
-   {
-      title: 'Online Shop Backend',
-      imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
-      stack: ['GO', 'MONGO', 'PG'],
+      stack: ['PY', 'FLASK', 'BS'],
       link: 'https://github.com/yourusername/Online-Shop-Backend',
    },
    {
       title: 'Ecommerce Shopping Cart',
       imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
-      stack: ['TAILWIND', 'REDUX', 'NODE'],
+      stack: ['TS', 'GO', 'TAILWIND'],
       link: 'https://github.com/yourusername/ecommerce-shopping-cart',
    },
 ];

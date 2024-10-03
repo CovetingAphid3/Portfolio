@@ -10,12 +10,14 @@ const icons = {
     GO: { icon: 'devicon-go-original-wordmark colored', label: 'Go' },
     SOCKET: { icon: 'devicon-socketio-original', label: 'Socket.io' },
     TS: { icon: 'devicon-typescript-plain colored', label: 'TypeScript' },
-    FRAMER: { icon: 'devicon-framermotion-original', label: 'Framer Motion' },
+    FRAMER: { icon: 'devicon-framermotion-original', label: 'Framer ' },
     REDUX: { icon: 'devicon-redux-original colored', label: 'Redux' },
     JS: { icon: 'devicon-javascript-plain colored', label: 'Javascript' },
     PG: { icon: 'devicon-postgresql-plain colored', label: 'Postgress' },
     PY: { icon: 'devicon-python-plain colored', label: 'Python' },
     CS: { icon: 'devicon-csharp-plain colored', label: 'C#' },
+    FLASK: { icon: 'devicon-flask-original', label: 'FLASK' },
+    BS: { icon: 'devicon-bootstrap-plain-wordmark ', label: 'Bootstrap' },
 };
 
 const PortfolioItem = ({ title, imgUrl, stack, link }) => {
