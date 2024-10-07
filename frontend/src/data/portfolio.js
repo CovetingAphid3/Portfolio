@@ -2,7 +2,7 @@ export default [
    {
       title: 'Pharmacy Web Page',
       imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
-      stack: ['REACT', 'NODE', 'MONGO'],
+      stack: ['REACT', 'NODE', 'MONGO','REDIS'],
       link: 'https://pharmacy-web-page-g8v8.vercel.app/',
    },
    {
@@ -10,6 +10,12 @@ export default [
       imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
       stack: ['REACT', 'TS', 'MONGO'],
       link: 'https://github.com/Covetingaphid3/Inventory-Management',
+   },
+   {
+      title: 'Admin Dashboard',
+      imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+      stack: ['VUE','GO' ,'TAILWIND','TS'],
+      link: 'https://github.com/Covetingaphid3/admin-dashboard',
    },
    {
       title: 'Chat Application',

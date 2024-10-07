@@ -18,6 +18,9 @@ const icons = {
     CS: { icon: 'devicon-csharp-plain colored', label: 'C#' },
     FLASK: { icon: 'devicon-flask-original', label: 'FLASK' },
     BS: { icon: 'devicon-bootstrap-plain-wordmark ', label: 'Bootstrap' },
+    VUE: { icon: 'devicon-vuejs-plain', label: 'VUE' },
+    REDIS: { icon: 'devicon-redis-plain colored', label: 'REDIS' },
+
 };
 
 const PortfolioItem = ({ title, imgUrl, stack, link }) => {
