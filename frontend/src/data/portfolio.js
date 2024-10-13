@@ -1,7 +1,7 @@
 export default [
    {
       title: 'Pharmacy Web Page',
-      imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+      imgUrl: '/assets/pharmacy.png',
       stack: ['REACT', 'NODE', 'MONGO','REDIS'],
       link: 'https://pharmacy-web-page-g8v8.vercel.app/',
    },
@@ -13,13 +13,13 @@ export default [
    },
    {
       title: 'Admin Dashboard',
-      imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+      imgUrl: '/assets/admin-dashboard.png',
       stack: ['VUE','GO' ,'TAILWIND','TS'],
       link: 'https://github.com/Covetingaphid3/admin-dashboard',
    },
    {
       title: 'Chat Application',
-      imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+      imgUrl: '/assets/chat.png',
       stack: ['GO', 'SOCKET', 'JS'],
       link: 'https://github.com/Covetingaphid3/Chat-Application',
    },
@@ -37,7 +37,7 @@ export default [
    },
    {
       title: 'Ecommerce Shopping Cart',
-      imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+      imgUrl: '/assets/ecommerce.png',
       stack: ['TS', 'GO', 'TAILWIND'],
       link: 'https://github.com/CovetingAphid3/ecommerce-shopping-cart',
    },

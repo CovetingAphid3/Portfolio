@@ -26,7 +26,7 @@ const icons = {
 const PortfolioItem = ({ title, imgUrl, stack, link }) => {
     return (
         <motion.div 
-            className='bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:scale-105'
+            className='bg-gray-800 text-white overflow-hidden shadow-lg transform transition duration-300 hover:scale-105'
             whileHover={{ y: -5 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
