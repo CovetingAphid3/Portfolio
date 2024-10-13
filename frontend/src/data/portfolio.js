@@ -25,7 +25,7 @@ export default [
    },
    {
       title: 'Data Structure & Algorithms',
-      imgUrl: 'https://cdn.pixabay.com/photo/2021/03/11/12/58/laptop-6087062_1280.png',
+      imgUrl: '/assets/dsa.webp',
       stack: ['PY', 'TS', 'CS',"GO"],
       link: 'https://github.com/Covetingaphid3/dsa',
    },
