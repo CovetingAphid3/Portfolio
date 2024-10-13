@@ -6,10 +6,10 @@ export default [
       link: 'https://pharmacy-web-page-g8v8.vercel.app/',
    },
    {
-      title: 'Inventory Management System',
-      imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
-      stack: ['REACT', 'TS', 'MONGO'],
-      link: 'https://github.com/Covetingaphid3/Inventory-Management',
+      title: 'Ecommerce Shopping Cart',
+      imgUrl: '/assets/ecommerce.png',
+      stack: ['TS', 'GO', 'TAILWIND'],
+      link: 'https://github.com/CovetingAphid3/ecommerce-shopping-cart',
    },
    {
       title: 'Admin Dashboard',
@@ -36,10 +36,10 @@ export default [
       link: 'https://github.com/Covetingaphid3/laundromat',
    },
    {
-      title: 'Ecommerce Shopping Cart',
-      imgUrl: '/assets/ecommerce.png',
-      stack: ['TS', 'GO', 'TAILWIND'],
-      link: 'https://github.com/CovetingAphid3/ecommerce-shopping-cart',
+      title: 'Inventory Management System',
+      imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+      stack: ['REACT', 'TS', 'MONGO'],
+      link: 'https://github.com/Covetingaphid3/Inventory-Management',
    },
 ];
 

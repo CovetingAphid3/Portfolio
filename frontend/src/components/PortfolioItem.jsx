@@ -26,11 +26,12 @@ const icons = {
 const PortfolioItem = ({ title, imgUrl, stack, link }) => {
     return (
         <motion.div 
-            className='bg-gray-800 text-white overflow-hidden shadow-lg transform transition duration-300 hover:scale-105'
-            whileHover={{ y: -5 }}
+            className='bg-gray-800 text-white overflow-hidden shadow-lg'
+            whileHover={{ scale: 1.05, y: -5 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3, ease: [0.5, 0, 0.5, 1] }} // Smooth ease
+            style={{ willChange: 'transform, opacity' }} // Hint to optimize
         >
             <a href={link} target="_blank" rel="noopener noreferrer" className="block">
                 <img 
@@ -46,6 +47,7 @@ const PortfolioItem = ({ title, imgUrl, stack, link }) => {
                                 key={item} 
                                 className='inline-flex items-center px-2 py-1 bg-gray-700 rounded-full text-sm'
                                 whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.2 }} 
                             >
                                 <i className={`${icons[item]?.icon} mr-1`}></i>
                                 {icons[item]?.label || item}
@@ -59,3 +61,4 @@ const PortfolioItem = ({ title, imgUrl, stack, link }) => {
 };
 
 export default PortfolioItem;
+
