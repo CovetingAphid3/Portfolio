@@ -31,13 +31,13 @@ export default [
    },
    {
       title: 'Online Laundromat',
-      imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+      imgUrl: '/assets/laundry.png',
       stack: ['PY', 'FLASK', 'BS'],
       link: 'https://github.com/Covetingaphid3/laundromat',
    },
    {
       title: 'Inventory Management System',
-      imgUrl: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+      imgUrl: '/assets/inventory.png',
       stack: ['REACT', 'TS', 'MONGO'],
       link: 'https://github.com/Covetingaphid3/Inventory-Management',
    },
