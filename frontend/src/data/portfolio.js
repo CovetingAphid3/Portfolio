@@ -1,13 +1,13 @@
 export default [
     {
         title: 'Pharmacy Web Page',
-        imgUrl: '/assets/pharmacy.png',
+        imgUrl: '/assets/pharmacy.webp',
         stack: ['REACT', 'NODE', 'MONGO', 'REDIS'],
         link: 'https://pharmacy-web-page-g8v8.vercel.app/',
     },
     {
         title: 'Digital Marketing Website',
-        imgUrl: '/assets/marketing.png',
+        imgUrl: '/assets/marketing.webp',
         stack: ['VUE', 'TAILWIND', 'TS'],
         link: 'https://github.com/Covetingaphid3/admin-dashboard',
     },
@@ -26,7 +26,7 @@ export default [
 
     {
         title: 'Restaurant Web App',
-        imgUrl: '/assets/restaurant.png',
+        imgUrl: '/assets/restaurant.webp',
         stack: ['VUE', 'TAILWIND', 'TS'],
         link: 'https://restaurant-prototype.vercel.app',
     },
@@ -38,7 +38,7 @@ export default [
     },
     {
         title: 'Online Laundromat',
-        imgUrl: '/assets/laundry.png',
+        imgUrl: '/assets/laundry.webp',
         stack: ['PY', 'FLASK', 'BS'],
         link: 'https://github.com/Covetingaphid3/laundromat',
     },
