@@ -6,6 +6,12 @@ export default [
         link: 'https://pharmacy-web-page-g8v8.vercel.app/',
     },
     {
+        title: 'Digital Marketing Website',
+        imgUrl: '/assets/marketing.png',
+        stack: ['VUE', 'TAILWIND', 'TS'],
+        link: 'https://github.com/Covetingaphid3/admin-dashboard',
+    },
+    {
         title: 'Ecommerce Shopping Cart',
         imgUrl: '/assets/ecommerce.png',
         stack: ['TS', 'GO', 'TAILWIND'],
