@@ -9,7 +9,7 @@ export default [
         title: 'Digital Marketing Website',
         imgUrl: '/assets/marketing.webp',
         stack: ['VUE', 'TAILWIND', 'TS'],
-        link: 'https://github.com/Covetingaphid3/admin-dashboard',
+        link: 'https://marketing-rosy-theta.vercel.app/',
     },
     {
         title: 'Ecommerce Shopping Cart',
