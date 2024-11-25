@@ -1,5 +1,11 @@
 export default [
     {
+        title: 'Particle Physics Simulator',
+        imgUrl: '/assets/physics.png',
+        stack: ['GO'],
+        link: 'https://github.com/Covetingaphid3/particle-physics-simulator',
+    },
+    {
         title: 'Pharmacy Web Page',
         imgUrl: '/assets/pharmacy.webp',
         stack: ['REACT', 'NODE', 'MONGO', 'REDIS'],
