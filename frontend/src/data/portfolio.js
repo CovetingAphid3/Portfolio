@@ -1,9 +1,21 @@
 export default [
     {
-        title: 'Particle Physics Simulator',
-        imgUrl: '/assets/physics.png',
-        stack: ['GO'],
-        link: 'https://github.com/Covetingaphid3/particle-physics-simulator',
+        title: 'Cybergovern Website',
+        imgUrl: '/assets/cybergovern.png',
+        stack: ['REACT', 'TS', 'MONGO'],
+        link: 'https://www.cybergovern.co.za/',
+    },
+    {
+        title: 'Duja Recruiter - Graduate Recruitment',
+        imgUrl: '/assets/duja.png',
+        stack: ['VUE', 'GO', 'TAILWIND', 'TS'],
+        link: 'https://applicant.duja-recruiter.co.za',
+    },
+    {
+        title: 'New Dawn Properties',
+        imgUrl: '/assets/newdawn.png',
+        stack: ['TS', 'GO', 'TAILWIND'],
+        link: 'https://site-ashy-pi.vercel.app/',
     },
     {
         title: 'Pharmacy Web Page',
@@ -12,35 +24,22 @@ export default [
         link: 'https://pharmacy-web-page-g8v8.vercel.app/',
     },
     {
+        title: 'Particle Physics Simulator',
+        imgUrl: '/assets/physics.png',
+        stack: ['GO'],
+        link: 'https://github.com/Covetingaphid3/particle-physics-simulator',
+    },
+    {
         title: 'Digital Marketing Website',
         imgUrl: '/assets/marketing.webp',
         stack: ['VUE', 'TAILWIND', 'TS'],
         link: 'https://marketing-rosy-theta.vercel.app/',
     },
     {
-        title: 'Ecommerce Shopping Cart',
-        imgUrl: '/assets/ecommerce.png',
-        stack: ['TS', 'GO', 'TAILWIND'],
-        link: 'https://github.com/CovetingAphid3/ecommerce-shopping-cart',
-    },
-    {
-        title: 'Admin Dashboard',
-        imgUrl: '/assets/admin-dashboard.png',
-        stack: ['VUE', 'GO', 'TAILWIND', 'TS'],
-        link: 'https://github.com/Covetingaphid3/admin-dashboard',
-    },
-
-    {
-        title: 'Restaurant Web App',
-        imgUrl: '/assets/restaurant.webp',
-        stack: ['VUE', 'TAILWIND', 'TS'],
-        link: 'https://restaurant-prototype.vercel.app',
-    },
-    {
-        title: 'Chat Application',
-        imgUrl: '/assets/chat.png',
-        stack: ['GO', 'SOCKET', 'JS'],
-        link: 'https://github.com/Covetingaphid3/Chat-Application',
+        title: 'Data Structure & Algorithms',
+        imgUrl: '/assets/dsa.webp',
+        stack: ['PY', 'TS', 'CS', "GO"],
+        link: 'https://github.com/Covetingaphid3/dsa',
     },
     {
         title: 'Online Laundromat',
@@ -48,17 +47,12 @@ export default [
         stack: ['PY', 'FLASK', 'BS'],
         link: 'https://github.com/Covetingaphid3/laundromat',
     },
+
     {
-        title: 'Inventory Management System',
-        imgUrl: '/assets/inventory.png',
-        stack: ['REACT', 'TS', 'MONGO'],
-        link: 'https://github.com/Covetingaphid3/Inventory-Management',
-    },
-    {
-        title: 'Data Structure & Algorithms',
-        imgUrl: '/assets/dsa.webp',
-        stack: ['PY', 'TS', 'CS', "GO"],
-        link: 'https://github.com/Covetingaphid3/dsa',
+        title: 'Restaurant Web App',
+        imgUrl: '/assets/restaurant.webp',
+        stack: ['VUE', 'TAILWIND', 'TS'],
+        link: 'https://restaurant-prototype.vercel.app',
     },
 ];
 
