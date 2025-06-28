@@ -49,13 +49,13 @@ const Hero = () => {
     return (
         <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Effects */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-                <div className="absolute inset-0 opacity-20 bg-slate-700"></div>
+            <div className="absolute inset-0 bg-black">
+                <div className="absolute inset-0 opacity-20 bg-green-500/5"></div>
             </div>
 
             {/* Floating Elements */}
             <motion.div
-                className="absolute top-20 left-20 text-blue-500/20"
+                className="absolute top-20 left-20 text-green-500/20"
                 animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
                 transition={{ duration: 6, repeat: Infinity }}
             >
@@ -69,7 +69,7 @@ const Hero = () => {
                 <ServerIcon className="w-16 h-16" />
             </motion.div>
             <motion.div
-                className="absolute bottom-32 left-32 text-purple-500/20"
+                className="absolute bottom-32 left-32 text-green-500/20"
                 animate={{ y: [0, -15, 0], rotate: [0, 3, 0] }}
                 transition={{ duration: 7, repeat: Infinity }}
             >
@@ -84,31 +84,33 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    {/* Badge */}
+                    {/* Terminal Prompt */}
                     <motion.div variants={itemVariants} className="mb-8">
-                        <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                        <span className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-green-500/10 text-green-400 border border-green-500/30">
                             <BoltIcon className="w-4 h-4 mr-2" />
-                            Available for New Projects
+                            root@portfolio:~$ ./start.sh
                         </span>
                     </motion.div>
 
                     {/* Main Heading */}
                     <motion.h1 
                         variants={itemVariants}
-                        className="text-5xl md:text-7xl font-bold text-white mb-6"
+                        className="text-5xl md:text-7xl font-bold text-green-400 mb-6 font-mono"
                     >
+                        <span className="terminal-prompt"></span>
                         Full-Stack Developer &amp;
                         <br />
-                        <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-400 bg-clip-text text-transparent">
+                        <span className="text-green-300 glitch">
                             Security Expert
                         </span>
+                        <span className="terminal-cursor">|</span>
                     </motion.h1>
 
                     {/* Rotating Skills */}
                     <motion.div variants={itemVariants} className="mb-8">
-                        <div className="text-2xl md:text-3xl text-gray-300">
-                            Specializing in{' '}
-                            <span className="text-blue-400 font-semibold">
+                        <div className="text-2xl md:text-3xl text-green-300 font-mono">
+                            <span className="text-green-500">$</span> specializing in{' '}
+                            <span className="text-green-400 font-semibold">
                                 {skills[currentSkill]}
                             </span>
                         </div>
@@ -117,9 +119,9 @@ const Hero = () => {
                     {/* Description */}
                     <motion.p 
                         variants={itemVariants}
-                        className="text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed"
+                        className="text-xl text-green-300 max-w-3xl mx-auto mb-12 leading-relaxed font-mono"
                     >
-                        I build lightning-fast, secure applications with a focus on performance optimization. 
+                        <span className="text-green-500">#</span> Building lightning-fast, secure applications with a focus on performance optimization. 
                         From frontend to backend, VPS deployment to ethical hacking, I deliver solutions that 
                         scale and protect your business.
                     </motion.p>
@@ -128,16 +130,15 @@ const Hero = () => {
                     <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                         <a
                             href="#contact"
-                            className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                            className="group relative px-8 py-4 bg-green-500/10 border border-green-500 text-green-400 font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:bg-green-500 hover:text-black hover:scale-105 hover:shadow-2xl font-mono"
                         >
-                            <span className="relative z-10">Start Your Project</span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <span className="relative z-10">$ ./start_project.sh</span>
                         </a>
                         <a
                             href="#portfolio"
-                            className="px-8 py-4 border-2 border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
+                            className="px-8 py-4 border-2 border-green-500/50 text-green-300 font-semibold rounded-lg hover:border-green-400 hover:text-green-400 transition-all duration-300 font-mono"
                         >
-                            View My Work
+                            $ ls -la projects/
                         </a>
                     </motion.div>
 
@@ -150,8 +151,8 @@ const Hero = () => {
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
             >
-                <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
-                    <div className="w-1 h-3 bg-gray-400 rounded-full mt-2"></div>
+                <div className="text-green-400 font-mono text-sm">
+                    $ scroll down
                 </div>
             </motion.div>
         </div>

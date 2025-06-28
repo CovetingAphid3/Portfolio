@@ -1,8 +1,148 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+/* Terminal Font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Terminal Cursor Animation */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Base Terminal Styles */
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #0a0a0a;
+  color: #00ff00;
+  overflow-x: hidden;
+}
+
+/* Terminal Cursor */
+.terminal-cursor {
+  animation: blink 1s infinite;
+}
+
+/* Terminal Text Effect */
+.terminal-text {
+  border-right: 2px solid #00ff00;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 3s steps(40) 1s 1 normal both, blink 1s infinite;
+}
+
+/* Glitch Effect */
+.glitch {
+  animation: glitch 0.3s infinite;
+}
+
+/* Terminal Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc00;
+}
+
+/* Terminal Selection */
+::selection {
+  background: #00ff00;
+  color: #0a0a0a;
+}
+
+/* Terminal Focus Styles */
+.terminal-input:focus {
+  outline: none;
+  border-color: #00ff00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+/* Terminal Button Hover */
+.terminal-btn:hover {
+  background: #00ff00;
+  color: #0a0a0a;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+/* Terminal Card */
+.terminal-card {
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+.terminal-card:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
+  border-color: #00cc00;
+}
+
+/* Matrix Rain Effect */
+.matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+/* Terminal Prompt */
+.terminal-prompt::before {
+  content: "root@portfolio:~$ ";
+  color: #00ff00;
+  font-weight: bold;
+}
+
+/* Status Bar */
+.status-bar {
+  background: rgba(0, 255, 0, 0.1);
+  border-top: 1px solid #00ff00;
+}
+
+/* Loading Animation */
+.terminal-loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 255, 0, 0.3);
+  border-radius: 50%;
+  border-top-color: #00ff00;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 .styled{
   text-transform: uppercase;
     -webkit-background-clip: text;

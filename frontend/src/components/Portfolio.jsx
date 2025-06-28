@@ -1,4 +1,5 @@
 import { ShieldCheckIcon, CodeBracketIcon, ServerIcon, LockClosedIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
+import { motion } from 'framer-motion';
 import portfolio from '../data/portfolio'
 
 const getProjectDetails = (project) => {
@@ -73,108 +74,156 @@ const getIcon = (stack) => {
 }
 
 const Portfolio = () => {
-    return (
-        <section className="py-20 scroll-mt-20" id="projects">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center">
-                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                        Professional Projects
-                    </h2>
-                    <p className="mt-4 text-lg text-gray-300">
-                        Showcasing impactful solutions and technical expertise
-                    </p>
-                </div>
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
 
-                <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5
+            }
+        }
+    };
+
+    return (
+        <section className="py-12 scroll-mt-20" id="projects">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <motion.div 
+                    className="text-center"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
+                    <motion.h2 
+                        variants={itemVariants}
+                        className="text-4xl font-bold text-green-400 mb-4 font-mono"
+                    >
+                        $ ls projects/
+                    </motion.h2>
+                    <motion.p 
+                        variants={itemVariants}
+                        className="text-xl text-green-300 font-mono"
+                    >
+                        # Showcasing impactful solutions and technical expertise
+                    </motion.p>
+                </motion.div>
+
+                <motion.div 
+                    className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
                     {portfolio.map((project) => {
                         const Icon = getIcon(project.stack);
                         const details = getProjectDetails(project);
                         
                         return (
-                            <div
+                            <motion.div
                                 key={project.title}
-                                className="group relative bg-slate-800/50 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300"
+                                variants={itemVariants}
+                                className="terminal-card rounded-lg overflow-hidden hover:scale-105 transition-all duration-300"
                             >
                                 <div className="p-6">
-                                    <div className="flex items-center justify-between">
+                                    <div className="flex items-center justify-between mb-4">
                                         <div className="flex items-center space-x-4">
-                                            <Icon className="h-8 w-8 text-blue-500" />
-                                            <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                                            <Icon className="h-8 w-8 text-green-400" />
+                                            <h3 className="text-xl font-semibold text-green-400 font-mono">{project.title}</h3>
                                         </div>
                                         <a
                                             href={project.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-blue-400 hover:text-blue-300"
+                                            className="text-green-400 hover:text-green-300 transition-colors duration-300"
                                         >
                                             <ArrowTopRightOnSquareIcon className="h-6 w-6" />
                                         </a>
                                     </div>
                                     
-                                    <div className="mt-4">
+                                    <div className="mb-6">
                                         <img 
                                             src={project.imgUrl} 
                                             alt={project.title}
-                                            className="w-full h-48 object-cover rounded-lg"
+                                            className="w-full h-48 object-cover rounded-lg border border-green-500/30"
                                         />
                                     </div>
 
-                                    <div className="mt-6">
-                                        <h4 className="text-sm font-medium text-white">Business Impact</h4>
-                                        <ul className="mt-2 space-y-2">
-                                            {details.impact.map((item) => (
-                                                <li key={item} className="flex items-start">
-                                                    <span className="flex h-6 items-center">
-                                                        <span className="h-1.5 w-1.5 rounded-full bg-blue-500"></span>
-                                                    </span>
-                                                    <span className="ml-3 text-sm text-gray-300">{item}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                    
-                                    <div className="mt-6">
-                                        <h4 className="text-sm font-medium text-white">Key Achievements</h4>
-                                        <ul className="mt-2 space-y-2">
-                                            {details.achievements.map((achievement) => (
-                                                <li key={achievement} className="flex items-start">
-                                                    <span className="flex h-6 items-center">
-                                                        <span className="h-1.5 w-1.5 rounded-full bg-blue-500"></span>
-                                                    </span>
-                                                    <span className="ml-3 text-sm text-gray-300">{achievement}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-
-                                    <div className="mt-6">
-                                        <h4 className="text-sm font-medium text-white">Technologies & Skills</h4>
-                                        <div className="mt-2 flex flex-wrap gap-2">
-                                            {project.stack.map((tech) => (
-                                                <span
-                                                    key={tech}
-                                                    className="inline-flex items-center rounded-md bg-blue-500/10 px-2 py-1 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-500/20"
-                                                >
-                                                    {tech}
-                                                </span>
-                                            ))}
+                                    <div className="space-y-6">
+                                        <div>
+                                            <h4 className="text-sm font-medium text-green-400 font-mono mb-2">
+                                                <span className="text-green-500">$</span> business_impact
+                                            </h4>
+                                            <ul className="space-y-2">
+                                                {details.impact.map((item) => (
+                                                    <li key={item} className="flex items-start">
+                                                        <span className="flex h-6 items-center">
+                                                            <span className="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                                                        </span>
+                                                        <span className="ml-3 text-sm text-green-300 font-mono">{item}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
                                         </div>
-                                        <div className="mt-2 flex flex-wrap gap-2">
-                                            {details.skills.map((skill) => (
-                                                <span
-                                                    key={skill}
-                                                    className="inline-flex items-center rounded-md bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20"
-                                                >
-                                                    {skill}
-                                                </span>
-                                            ))}
+                                        
+                                        <div>
+                                            <h4 className="text-sm font-medium text-green-400 font-mono mb-2">
+                                                <span className="text-green-500">$</span> achievements
+                                            </h4>
+                                            <ul className="space-y-2">
+                                                {details.achievements.map((achievement) => (
+                                                    <li key={achievement} className="flex items-start">
+                                                        <span className="flex h-6 items-center">
+                                                            <span className="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                                                        </span>
+                                                        <span className="ml-3 text-sm text-green-300 font-mono">{achievement}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+
+                                        <div>
+                                            <h4 className="text-sm font-medium text-green-400 font-mono mb-2">
+                                                <span className="text-green-500">$</span> technologies
+                                            </h4>
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.stack.map((tech) => (
+                                                    <span
+                                                        key={tech}
+                                                        className="inline-flex items-center rounded-lg bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 border border-green-500/30 font-mono"
+                                                    >
+                                                        {tech}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                            <div className="mt-2 flex flex-wrap gap-2">
+                                                {details.skills.map((skill) => (
+                                                    <span
+                                                        key={skill}
+                                                        className="inline-flex items-center rounded-lg bg-green-500/5 px-2 py-1 text-xs font-medium text-green-300 border border-green-500/20 font-mono"
+                                                    >
+                                                        {skill}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         );
                     })}
-                </div>
+                </motion.div>
             </div>
         </section>
     )

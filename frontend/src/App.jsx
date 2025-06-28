@@ -16,10 +16,13 @@ const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
     return (
-        <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen text-gray-100 overflow-x-hidden">
+        <div className="bg-black min-h-screen text-green-400 overflow-x-hidden font-mono">
+            {/* Matrix Background Effect */}
+            <div className="matrix-bg"></div>
+            
             {/* Navigation */}
             <motion.div 
-                className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50"
+                className="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-green-500/30"
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -37,43 +40,42 @@ function App() {
                 </section>
 
                 {/* About Section */}
-                <section id="about" className="py-20">
+                <section id="about" className="py-12">
                     <Suspense fallback={<LoadingSpinner />}>
                         <About />
                     </Suspense>
                 </section>
 
                 {/* Skills Section */}
-                <section id="skills" className="py-20 bg-slate-800/30">
+                <section id="skills" className="py-12 bg-black/50">
                     <Suspense fallback={<LoadingSpinner />}>
                         <Skills />
                     </Suspense>
                 </section>
 
+                {/* Portfolio Section */}
+                <section id="portfolio" className="py-12">
+                    <Suspense fallback={<LoadingSpinner />}>
+                        <Portfolio />
+                    </Suspense>
+                </section>
                 {/* Security Expertise */}
-                <section id="security" className="py-20">
+                <section id="security" className="py-12">
                     <Suspense fallback={<LoadingSpinner />}>
                         <SecurityExpertise />
                     </Suspense>
                 </section>
 
                 {/* Performance Metrics */}
-                <section id="performance" className="py-20 bg-slate-800/30">
+                <section id="performance" className="py-12 bg-black/50">
                     <Suspense fallback={<LoadingSpinner />}>
                         <PerformanceMetrics />
                     </Suspense>
                 </section>
 
-                {/* Portfolio Section */}
-                <section id="portfolio" className="py-20">
-                    <Suspense fallback={<LoadingSpinner />}>
-                        <Portfolio />
-                    </Suspense>
-                </section>
-
 
                 {/* Contact Section */}
-                <section id="contact" className="py-20">
+                <section id="contact" className="py-12">
                     <Suspense fallback={<LoadingSpinner />}>
                         <Contact />
                     </Suspense>
@@ -81,7 +83,7 @@ function App() {
             </main>
 
             {/* Footer */}
-            <footer className="border-t border-slate-700/50 bg-slate-900/50">
+            <footer className="border-t border-green-500/30 bg-black/50">
                 <Footer />
             </footer>
 

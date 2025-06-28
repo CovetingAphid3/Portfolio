@@ -1,55 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
+    CodeBracketIcon, 
     ShieldCheckIcon, 
     BoltIcon, 
-    ServerIcon, 
-    CommandLineIcon,
-    GlobeAltIcon,
-    CpuChipIcon,
-    CodeBracketIcon
+    ServerIcon,
+    UserIcon,
+    AcademicCapIcon
 } from '@heroicons/react/24/outline';
 
 const About = () => {
-    const expertise = [
-        {
-            icon: CodeBracketIcon,
-            title: 'Full-Stack Development',
-            description: 'End-to-end application development with modern frameworks and best practices',
-            skills: ['React', 'Vue.js', 'Node.js', 'Go', 'TypeScript', 'Python']
-        },
-        {
-            icon: BoltIcon,
-            title: 'Performance Optimization',
-            description: 'Lightning-fast applications through advanced optimization techniques',
-            skills: ['Code Splitting', 'Caching', 'CDN', 'Database Optimization']
-        },
-        {
-            icon: ServerIcon,
-            title: 'VPS Deployment',
-            description: 'Scalable infrastructure setup and management for production applications',
-            skills: ['Linux', 'Docker', 'Nginx', 'CI/CD', 'Monitoring']
-        },
-        {
-            icon: ShieldCheckIcon,
-            title: 'Ethical Hacking',
-            description: 'Security-first development with penetration testing expertise',
-            skills: ['Penetration Testing', 'Security Auditing', 'OWASP', 'CTF']
-        },
-        {
-            icon: CommandLineIcon,
-            title: 'Linux Administration',
-            description: 'Deep Linux expertise for server management and automation',
-            skills: ['System Administration', 'Shell Scripting', 'Security Hardening']
-        },
-        {
-            icon: GlobeAltIcon,
-            title: 'Security-First Design',
-            description: 'Building applications with security as a core principle',
-            skills: ['Secure Coding', 'Authentication', 'Authorization', 'Encryption']
-        }
-    ];
-
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -71,10 +31,33 @@ const About = () => {
         }
     };
 
+    const expertiseAreas = [
+        {
+            icon: CodeBracketIcon,
+            title: 'Full-Stack Development',
+            description: 'End-to-end application development with modern frameworks and best practices'
+        },
+        {
+            icon: BoltIcon,
+            title: 'Performance Optimization',
+            description: 'Lightning-fast applications with optimized loading times and user experience'
+        },
+        {
+            icon: ShieldCheckIcon,
+            title: 'Security-First Approach',
+            description: 'Ethical hacking expertise and security auditing for robust applications'
+        },
+        {
+            icon: ServerIcon,
+            title: 'VPS Deployment',
+            description: 'Scalable infrastructure setup and server management for production applications'
+        }
+    ];
+
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-                className="text-center mb-16"
+                className="text-center mb-8"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -82,139 +65,141 @@ const About = () => {
             >
                 <motion.h2 
                     variants={itemVariants}
-                    className="text-4xl font-bold text-white mb-4"
+                    className="text-4xl font-bold text-green-400 mb-4 font-mono"
                 >
-                    About Me
+                    $ cat about.txt
                 </motion.h2>
                 <motion.p 
                     variants={itemVariants}
-                    className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed"
+                    className="text-xl text-green-300 max-w-3xl mx-auto font-mono"
                 >
-                    I'm a passionate full-stack developer with a unique combination of development expertise 
-                    and security knowledge. My journey spans from building high-performance web applications 
-                    to conducting security assessments and managing production infrastructure.
+                    # Passionate full-stack developer with expertise in performance optimization and security
                 </motion.p>
             </motion.div>
 
-            {/* Main Story */}
-            <motion.div
-                className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                <motion.div variants={itemVariants}>
-                    <h3 className="text-2xl font-bold text-white mb-6">My Journey</h3>
-                    <div className="space-y-4 text-gray-300">
-                        <p>
-                            My passion for technology started with web development, where I quickly realized 
-                            that building great applications requires more than just coding skills. It needs 
-                            a deep understanding of performance, security, and infrastructure.
-                        </p>
-                        <p>
-                            This led me to explore ethical hacking and cybersecurity, where I gained practical 
-                            experience through CTF challenges and real-world applications. This security-first 
-                            mindset now influences every project I work on.
-                        </p>
-                        <p>
-                            Today, I specialize in building lightning-fast, secure applications with a focus 
-                            on performance optimization and scalable architecture. Whether it's frontend development, 
-                            backend APIs, or VPS deployment, I ensure every solution is robust, efficient, and secure.
-                        </p>
-                    </div>
-                </motion.div>
-
-                <motion.div variants={itemVariants}>
-                    <h3 className="text-2xl font-bold text-white mb-6">What Sets Me Apart</h3>
-                    <div className="space-y-4">
-                        <div className="flex items-start space-x-3">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <h4 className="text-white font-semibold">Performance-First Approach</h4>
-                                <p className="text-gray-400 text-sm">Every application is optimized for speed and efficiency from the ground up.</p>
-                            </div>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <h4 className="text-white font-semibold">Security Expertise</h4>
-                                <p className="text-gray-400 text-sm">Real-world security knowledge applied to build robust, protected applications.</p>
-                            </div>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                            <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <h4 className="text-white font-semibold">Full-Stack Mastery</h4>
-                                <p className="text-gray-400 text-sm">Complete control over the entire development stack and deployment process.</p>
-                            </div>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                            <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <h4 className="text-white font-semibold">Linux Proficiency</h4>
-                                <p className="text-gray-400 text-sm">Deep understanding of Linux systems for optimal server management and deployment.</p>
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
-            </motion.div>
-
-            {/* Expertise Grid */}
-            <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                {expertise.map((area, index) => {
-                    const Icon = area.icon;
-                    return (
-                        <motion.div
-                            key={area.title}
-                            variants={itemVariants}
-                            className="p-6 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-blue-500/50 transition-all duration-300 hover:scale-105"
-                        >
-                            <div className="flex items-center mb-4">
-                                <Icon className="w-8 h-8 text-blue-400 mr-3" />
-                                <h3 className="text-xl font-semibold text-white">{area.title}</h3>
-                            </div>
-                            <p className="text-gray-400 mb-4 text-sm">{area.description}</p>
-                            <div className="flex flex-wrap gap-2">
-                                {area.skills.map((skill) => (
-                                    <span
-                                        key={skill}
-                                        className="px-2 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20"
-                                    >
-                                        {skill}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
-                    );
-                })}
-            </motion.div>
-
-            {/* Call to Action */}
-            <motion.div
-                className="mt-16 p-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-xl text-center"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                <motion.div variants={itemVariants}>
-                    <h3 className="text-2xl font-bold text-white mb-4">Ready to Build Something Amazing?</h3>
-                    <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-                        Let's work together to create a fast, secure, and scalable application that exceeds your expectations.
-                    </p>
-                    <a
-                        href="#contact"
-                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:scale-105 transition-transform duration-300"
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                {/* Story Section */}
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
+                    <motion.h3 
+                        variants={itemVariants}
+                        className="text-2xl font-bold text-green-400 mb-6 font-mono"
                     >
-                        Start Your Project
-                    </a>
+                        $ ./my_story.sh
+                    </motion.h3>
+                    
+                    <motion.div variants={itemVariants} className="space-y-4 text-green-300 font-mono">
+                        <p>
+                            <span className="text-green-500">#</span> I'm a dedicated full-stack developer who believes that great software should be both 
+                            lightning-fast and bulletproof secure. My journey began with a fascination for how 
+                            systems work at their core, leading me to master both frontend and backend development.
+                        </p>
+                        
+                        <p>
+                            <span className="text-green-500">#</span> With expertise in performance optimization, I ensure every application I build loads 
+                            in under 2 seconds and provides a seamless user experience. My background in ethical 
+                            hacking means security isn't an afterthought—it's built into every line of code.
+                        </p>
+                        
+                        <p>
+                            <span className="text-green-500">#</span> From deploying applications on VPS servers to optimizing database queries, I handle 
+                            the entire development lifecycle. My goal is to deliver solutions that not only meet 
+                            your requirements but exceed your expectations in terms of speed, security, and scalability.
+                        </p>
+                    </motion.div>
+
+                    {/* Key Stats */}
+                </motion.div>
+
+                {/* Expertise Areas */}
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
+                    <motion.h3 
+                        variants={itemVariants}
+                        className="text-2xl font-bold text-green-400 mb-6 font-mono"
+                    >
+                        $ ls expertise/
+                    </motion.h3>
+                    
+                    <motion.div variants={itemVariants} className="space-y-4">
+                        {expertiseAreas.map((area, index) => {
+                            const Icon = area.icon;
+                            return (
+                                <div key={area.title} className="terminal-card p-4 rounded-lg">
+                                    <div className="flex items-start">
+                                        <Icon className="w-6 h-6 text-green-400 mr-4 mt-1" />
+                                        <div>
+                                            <h4 className="text-green-400 font-semibold mb-2 font-mono">
+                                                {area.title}
+                                            </h4>
+                                            <p className="text-green-300 text-sm font-mono">
+                                                {area.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </motion.div>
+                </motion.div>
+            </div>
+
+            {/* Development Philosophy */}
+            <motion.div
+                className="terminal-card p-8 rounded-lg"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+            >
+                <motion.h3 
+                    variants={itemVariants}
+                    className="text-2xl font-bold text-green-400 mb-6 text-center font-mono"
+                >
+                    $ cat philosophy.txt
+                </motion.h3>
+                
+                <motion.div 
+                    variants={itemVariants}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                >
+                    <div className="text-center">
+                        <div className="w-16 h-16 bg-green-500/10 border border-green-500/30 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <BoltIcon className="w-8 h-8 text-green-400" />
+                        </div>
+                        <h4 className="text-green-400 font-semibold mb-2 font-mono">Performance First</h4>
+                        <p className="text-green-300 text-sm font-mono">
+                            # Every millisecond counts. I optimize for speed without compromising functionality.
+                        </p>
+                    </div>
+                    
+                    <div className="text-center">
+                        <div className="w-16 h-16 bg-green-500/10 border border-green-500/30 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <ShieldCheckIcon className="w-8 h-8 text-green-400" />
+                        </div>
+                        <h4 className="text-green-400 font-semibold mb-2 font-mono">Security by Design</h4>
+                        <p className="text-green-300 text-sm font-mono">
+                            # Security isn't a feature—it's fundamental. Every application is built with security in mind.
+                        </p>
+                    </div>
+                    
+                    <div className="text-center">
+                        <div className="w-16 h-16 bg-green-500/10 border border-green-500/30 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <ServerIcon className="w-8 h-8 text-green-400" />
+                        </div>
+                        <h4 className="text-green-400 font-semibold mb-2 font-mono">Scalable Architecture</h4>
+                        <p className="text-green-300 text-sm font-mono">
+                            # Building for today's needs and tomorrow's growth. Scalable solutions that grow with your business.
+                        </p>
+                    </div>
                 </motion.div>
             </motion.div>
         </div>

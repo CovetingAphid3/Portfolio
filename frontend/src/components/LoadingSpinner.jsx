@@ -1,13 +1,20 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const LoadingSpinner = () => {
     return (
-        <div className="flex justify-center items-center py-20">
+        <div className="flex items-center justify-center py-20">
             <motion.div
-                className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-            />
+                className="text-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+            >
+                <div className="terminal-loading mx-auto mb-4"></div>
+                <p className="text-green-400 font-mono text-sm">
+                    <span className="text-green-500">$</span> loading component...
+                </p>
+            </motion.div>
         </div>
     );
 };
